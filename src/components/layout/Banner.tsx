@@ -10,7 +10,7 @@ import {
 
 export default function Banner() {
   return (
-    <section className="flex pb-11">
+    <section className="flex pb-12">
       <div className="flex flex-col gap-y-14 items-center justify-center text-gray-500">
         <div className="flex flex-col gap-y-6">
           <FaFacebookF className="cursor-pointer hover:text-black transition duration-300" />
