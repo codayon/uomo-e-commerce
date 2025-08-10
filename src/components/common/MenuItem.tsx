@@ -3,15 +3,15 @@ import { twMerge } from "tailwind-merge";
 
 type MenuItemProps = {
   to: string;
-  className?: string;
   label: string;
+  className?: string;
   classBottom?: string;
 };
 
 export default function MenuItem({
   to,
-  className,
   label,
+  className,
   classBottom,
 }: MenuItemProps) {
   return (
