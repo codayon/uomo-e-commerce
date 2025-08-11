@@ -10,11 +10,11 @@ export default function TrendyProducts() {
         <h3 className="text-4xl text-center">
           OUR TRENDY <span className="font-bold">PRODUCTS</span>
         </h3>
-        <ul className="flex gap-8 justify-center py-10 text-gray-b">
+        <ul className="flex gap-8 justify-center py-10 text-gray-500">
           <MenuItem
             to="/"
             label={"ALL"}
-            className={"text-black-a"}
+            className={"text-black"}
             classBottom={"w-3/5"}
           />
           <MenuItem to="/" label={"NEW ARRIVALS"} />
@@ -23,52 +23,68 @@ export default function TrendyProducts() {
         </ul>
         <div className={"flex flex-wrap gap-y-8 justify-between"}>
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Cropped Faux Leather Jacket"}
-            normalPrice={29}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Cropped Faux Leather Jacket"
+            price={29}
           />
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Calvin Shorts"}
-            normalPrice={62}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Calvin Shorts"
+            price={62}
           />
           <ProductCard
-            imgClass={"bg-gray-200"}
-            categoryName={"Dresses"}
-            productName={"Kirby T-Shirt"}
-            normalPrice={17}
+            src=""
+            alt=""
+            className="bg-gray-200"
+            category="Dresses"
+            productName="Kirby T-Shirt"
+            price={17}
           />
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Cableknit Shawl"}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Cableknit Shawl"
             prevPrice={129}
             offerPrice={99}
           />
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Colorful Jacket"}
-            normalPrice={29}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Colorful Jacket"
+            price={29}
           />
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Shirt In Botanical Cheetah Print"}
-            normalPrice={62}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Shirt In Botanical Cheetah Print"
+            price={62}
           />
           <ProductCard
-            imgClass={"bg-gray-200"}
-            categoryName={"Dresses"}
-            productName={"Cotton Jersey T-Shirt"}
-            normalPrice={17}
+            src=""
+            alt=""
+            className="bg-gray-200"
+            category="Dresses"
+            productName="Cotton Jersey T-Shirt"
+            price={17}
           />
           <ProductCard
-            imgClass={"bg-gray-100"}
-            categoryName={"Dresses"}
-            productName={"Zessi Dresses"}
+            src=""
+            alt=""
+            className="bg-gray-100"
+            category="Dresses"
+            productName="Zessi Dresses"
             prevPrice={129}
             offerPrice={99}
           />

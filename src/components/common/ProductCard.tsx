@@ -1,29 +1,42 @@
 import Flex from "@/components/common/Flex";
 import SvgWrapper from "@/components/common/SvgWrapper";
+import ImageWrapper from "./ImageWrapper";
+import { twMerge } from "tailwind-merge";
 
 type ProductCardProps = {
-  imgClass: string;
-  categoryName: string;
+  className?: string;
+  imgClassName?: string;
   productName: string;
-  normalPrice?: number;
+  category: string;
+  src: string;
+  alt: string;
+  price?: number;
   prevPrice?: number;
   offerPrice?: number;
 };
 
 export default function ProductCard({
-  imgClass,
-  categoryName,
+  className,
+  imgClassName,
   productName,
-  normalPrice,
+  category,
+  src,
+  alt,
+  price,
   prevPrice,
   offerPrice,
 }: ProductCardProps) {
   return (
     <div className="w-[330px]">
-      <div className={`h-[400px] w-full ${imgClass}`}></div>
+      <ImageWrapper
+        className={twMerge("h-[400px]", className)}
+        src={src}
+        alt={alt}
+        imgClassName={imgClassName}
+      />
       <div className="pt-3">
         <Flex className={"justify-between"}>
-          <h5 className="text-gray-500 text-sm">{categoryName}</h5>
+          <h5 className="text-gray-500 text-sm">{category}</h5>
           <SvgWrapper>
             <svg
               width="16"
@@ -40,8 +53,8 @@ export default function ProductCard({
           </SvgWrapper>
         </Flex>
         <h4>{productName}</h4>
-        {normalPrice !== undefined ? (
-          <h4>${normalPrice.toFixed(2)}</h4>
+        {price !== undefined ? (
+          <h4>${price.toFixed(2)}</h4>
         ) : prevPrice !== undefined && offerPrice !== undefined ? (
           <h4 className="text-red-700">
             <span className="text-gray-500 line-through mr-2">
