@@ -2,7 +2,6 @@ import SvgWrapper from "@/components/common/SvgWrapper";
 import Container from "@/components/common/Container";
 import Flex from "@/components/common/Flex";
 import MenuItem from "@/components/common/MenuItem";
-import SecurePayments from "@/assets/images/secure-payments.png";
 import { IoIosArrowUp } from "react-icons/io";
 import {
   FaFacebookF,
@@ -11,6 +10,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import ImageWrapper from "../common/ImageWrapper";
 
 export default function Footer() {
   return (
@@ -102,7 +102,7 @@ export default function Footer() {
             </div>
             <h5 className="pt-10 pb-3 font-medium">Secure Payments</h5>
             <div>
-              <img src={SecurePayments} alt="SecurePayments" />
+              <ImageWrapper src="/src/assets/images/secure-payments.png" alt="se" />
             </div>
           </div>
         </div>
