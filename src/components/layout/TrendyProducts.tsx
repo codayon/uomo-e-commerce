@@ -2,6 +2,7 @@ import Container from "@/components/common/Container";
 import MenuItem from "@/components/common/MenuItem";
 import Button from "@/components/common/Button";
 import ProductCard from "@/components/common/ProductCard";
+import productsData from "@/api/productsData.json";
 
 export default function TrendyProducts() {
   return (
@@ -22,72 +23,19 @@ export default function TrendyProducts() {
           <MenuItem to="/" label={"TOP RATING"} />
         </ul>
         <div className={"flex flex-wrap gap-y-8 justify-between"}>
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Cropped Faux Leather Jacket"
-            price={29}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Calvin Shorts"
-            price={62}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-200"
-            category="Dresses"
-            productName="Kirby T-Shirt"
-            price={17}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Cableknit Shawl"
-            prevPrice={129}
-            offerPrice={99}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Colorful Jacket"
-            price={29}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Shirt In Botanical Cheetah Print"
-            price={62}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-200"
-            category="Dresses"
-            productName="Cotton Jersey T-Shirt"
-            price={17}
-          />
-          <ProductCard
-            src=""
-            alt=""
-            className="bg-gray-100"
-            category="Dresses"
-            productName="Zessi Dresses"
-            prevPrice={129}
-            offerPrice={99}
-          />
+          {productsData.map((item) => (
+            <ProductCard
+              key={item.id}
+              src={item.image}
+              alt={item.name}
+              className="bg-gray-100"
+              category={item.category}
+              productName={item.name}
+              price={item.price}
+              prevPrice={item.prevPrice}
+              offerPrice={item.offerPrice}
+            />
+          ))}
         </div>
         <div className="flex justify-center pt-8 pb-12">
           <Button text={"SEE ALL PRODUCT"} className={"group"} />
