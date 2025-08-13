@@ -1,5 +1,9 @@
 import Container from "@/components/common/Container";
 import Button from "@/components/common/Button";
+import image1 from "@/assets/images/categories/categories1.jpg";
+import image2 from "@/assets/images/categories/categories2.jpg";
+import image3 from "@/assets/images/categories/categories3.jpg";
+import image4 from "@/assets/images/categories/categories4.jpg";
 
 export default function Categories() {
   return (
@@ -7,7 +11,10 @@ export default function Categories() {
       <Container>
         <div className={"flex w-full gap-8"}>
           {/* div 1 */}
-          <div className="bg-gray-100 text-sm w-1/2 flex flex-col justify-end p-10 h-[600px] items-start group cursor-pointer">
+          <div
+            className="text-sm w-1/2 flex flex-col justify-end p-10 h-[600px] items-start group cursor-pointer bg-no-repeat bg-center bg-cover"
+            style={{ backgroundImage: `url(${image1})` }}
+          >
             <h4>HOT LIST</h4>
             <h3 className="font-medium text-2xl">
               <span className="font-bold">WOMEN</span> COLLECTION
@@ -16,7 +23,10 @@ export default function Categories() {
           </div>
           <div className={"flex w-1/2 flex-col gap-8"}>
             {/* div 2 */}
-            <div className="bg-stone-200 text-sm w-full flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer">
+            <div
+              className="bg-stone-200 text-sm w-full flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer bg-no-repeat bg-center bg-cover"
+              style={{ backgroundImage: `url(${image2})` }}
+            >
               <h4>HOT LIST</h4>
               <h3 className="font-medium text-2xl">
                 <span className="font-bold">MEN</span> COLLECTION
@@ -25,7 +35,10 @@ export default function Categories() {
             </div>
             <div className={"flex w-full gap-8"}>
               {/* div 3 */}
-              <div className="bg-stone-200 text-sm w-1/2 flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer">
+              <div
+                className="text-sm w-1/2 flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer bg-no-repeat bg-center bg-cover"
+                style={{ backgroundImage: `url(${image3})` }}
+              >
                 <h4>HOT LIST</h4>
                 <h3 className="font-medium text-2xl">
                   <span className="font-bold">KIDS</span> COLLECTION
@@ -33,7 +46,10 @@ export default function Categories() {
                 <Button text={"SHOP NOW"} />
               </div>
               {/* div 4 */}
-              <div className="bg-orange-50 text-sm w-1/2 flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer">
+              <div
+                className="text-sm w-1/2 flex flex-col justify-end p-10 h-[284px] items-start group cursor-pointer bg-no-repeat bg-center bg-cover"
+                style={{ backgroundImage: `url(${image4})` }}
+              >
                 <h3 className="font-medium text-2xl">
                   <span className="font-bold">E-GIFT</span> CARDS
                 </h3>
