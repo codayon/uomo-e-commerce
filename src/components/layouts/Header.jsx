@@ -17,7 +17,7 @@ const data = {
     { id: 3, to: "collection", label: "COLLECTION" },
     { id: 4, to: "journal", label: "JOURNAL" },
     { id: 5, to: "lookbook", label: "LOOKBOOK" },
-    { id: 5, to: "pages", label: "PAGES" },
+    { id: 6, to: "pages", label: "PAGES" },
   ],
 };
 
