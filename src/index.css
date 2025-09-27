@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-222222: #222222;
+  --color-767676: #767676;
+  --color-f5e6e0: #f5e6e0;
+  --color-c32929: #c32929;
+}
+
 body {
   font-family: "Jost", sans-serif;
 }
