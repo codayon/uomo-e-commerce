@@ -35,7 +35,7 @@ export default function Header() {
                     to={item.to}
                     className={({ isActive }) =>
                       `relative group py-2 font-medium text-sm ${
-                        isActive ? "text-red-700" : "text-gray-500"
+                        isActive ? "text-c32929" : "text-767676"
                       }`
                     }
                   >
@@ -45,8 +45,8 @@ export default function Header() {
                         <span
                           className={`absolute left-0 bottom-0 h-0.5 ${
                             isActive
-                              ? "bg-red-700 w-full"
-                              : "bg-gray-500 w-0 group-hover:w-full transition-all ease-out duration-300"
+                              ? "bg-c32929 w-full"
+                              : "bg-767676 w-0 group-hover:w-full transition-all ease-out duration-300"
                           }`}
                         ></span>
                       </>
