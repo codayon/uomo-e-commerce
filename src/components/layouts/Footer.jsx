@@ -11,6 +11,7 @@ import { Link } from "react-router";
 import { UomoLogo } from "../common/SvgAssets";
 import Flex from "../common/Flex";
 import Container from "../common/Container";
+import MenuItem from "../common/MenuItem";
 
 const data = {
   menu: [
@@ -92,14 +93,11 @@ export default function Footer() {
               <h4 className="pb-12 text-lg font-medium">{section.title}</h4>
               <ul className="flex flex-col gap-6 text-sm">
                 {section.items.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                      to={item.to}
-                      className="hover:text-767676 cursor-pointer transition duration-300"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
+                  <MenuItem
+                    key={item.id}
+                    to={item.to}
+                    label={item.label}
+                  />
                 ))}
               </ul>
             </div>

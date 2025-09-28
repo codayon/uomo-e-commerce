@@ -1,4 +1,3 @@
-import { NavLink } from "react-router";
 import Container from "../common/Container";
 import Flex from "../common/Flex";
 import {
@@ -9,6 +8,7 @@ import {
   UomoLogo,
   UserIcon,
 } from "../common/SvgAssets";
+import MenuItem from "../common/MenuItem";
 
 const data = {
   menu: [
@@ -30,29 +30,12 @@ export default function Header() {
             <UomoLogo />
             <ul className="flex items-center gap-10">
               {data.menu.map((item) => (
-                <li key={item.id}>
-                  <NavLink
-                    to={item.to}
-                    className={({ isActive }) =>
-                      `relative group py-2 font-medium text-sm ${
-                        isActive ? "text-c32929" : "text-767676"
-                      }`
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        {item.label}
-                        <span
-                          className={`absolute left-0 bottom-0 h-0.5 ${
-                            isActive
-                              ? "bg-c32929 w-full"
-                              : "bg-767676 w-0 group-hover:w-full transition-all ease-out duration-300"
-                          }`}
-                        ></span>
-                      </>
-                    )}
-                  </NavLink>
-                </li>
+                <MenuItem
+                  key={item.id}
+                  to={item.to}
+                  label={item.label}
+                  isNav
+                />
               ))}
             </ul>
           </Flex>
