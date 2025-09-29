@@ -6,7 +6,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
-import { Link } from "react-router";
 
 import { UomoLogo } from "../common/SvgAssets";
 import Flex from "../common/Flex";

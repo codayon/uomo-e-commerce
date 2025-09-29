@@ -1,7 +1,5 @@
-import { twMerge } from "tailwind-merge";
+import cn from "@/utils/cn";
 
 export default function Flex({ className = "", children }) {
-  return (
-    <div className={twMerge("flex items-center", className)}>{children}</div>
-  );
+  return <div className={cn("flex items-center", className)}>{children}</div>;
 }

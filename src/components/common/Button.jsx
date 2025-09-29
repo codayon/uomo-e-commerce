@@ -1,9 +1,9 @@
-import { twMerge } from "tailwind-merge";
+import cn from "@/utils/cn";
 
 export default function Button({ className = "", label = "" }) {
   return (
     <button
-      className={twMerge(
+      className={cn(
         "relative group py-2 cursor-pointer font-medium text-sm",
         className
       )}

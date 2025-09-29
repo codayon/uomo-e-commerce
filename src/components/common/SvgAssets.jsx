@@ -1,7 +1,7 @@
-import { twMerge } from "tailwind-merge";
+import cn from "@/utils/cn";
 
 export const SvgWrapper = ({ className = "", children }) => {
-  return <div className={twMerge("cursor-pointer", className)}>{children}</div>;
+  return <div className={cn("cursor-pointer", className)}>{children}</div>;
 };
 
 export const UomoLogo = () => {

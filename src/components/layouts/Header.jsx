@@ -1,5 +1,7 @@
 import Container from "../common/Container";
 import Flex from "../common/Flex";
+
+import MenuItem from "../common/MenuItem";
 import {
   BarsIcon,
   CartIcon,
@@ -8,7 +10,6 @@ import {
   UomoLogo,
   UserIcon,
 } from "../common/SvgAssets";
-import MenuItem from "../common/MenuItem";
 
 const data = {
   menu: [
