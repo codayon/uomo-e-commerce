@@ -41,7 +41,7 @@ export default function TrendyProducts() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <section className="py-10">
+    <section className="mb-20">
       <Container>
         <h3 className="text-4xl text-center">
           OUR TRENDY <span className="font-bold">PRODUCTS</span>

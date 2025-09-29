@@ -19,7 +19,7 @@ const data = {
 
 export default function Banner() {
   return (
-    <section className="flex pb-10">
+    <section className="flex mb-20">
       <div className="text-222222 flex flex-col items-center justify-center gap-y-14">
         <div className="text-767676 flex flex-col gap-6">
           {data.social.map((item) => (

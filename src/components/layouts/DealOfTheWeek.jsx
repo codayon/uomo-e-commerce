@@ -3,7 +3,7 @@ import Container from "../common/Container";
 
 export default function DealOfTheWeek() {
   return (
-    <section className="bg-ebebeb py-28 my-10">
+    <section className="bg-ebebeb py-28 mb-20">
       <Container>
         <h4 className="text-c32929 before:bg-c32929 flex items-center before:block before:w-10 before:h-0.5 before:mr-2 text-sm font-medium">
           DEAL OF THE WEEK

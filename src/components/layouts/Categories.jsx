@@ -3,7 +3,7 @@ import Container from "../common/Container";
 
 export default function Categories() {
   return (
-    <section className="py-10">
+    <section className="mb-20">
       <Container>
         <div className="flex gap-8">
           <div className="bg-eff0f2 group flex-1 flex flex-col items-start justify-end p-10">
