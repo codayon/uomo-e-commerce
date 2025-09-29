@@ -30,7 +30,7 @@ export default function ProductCard({
           <HeartIcon />
         </Flex>
         <Flex className="justify-between pt-2 font-medium">
-          <h4 className="cursor-pointer w-4/5">{label}</h4>
+          <h4 className="cursor-pointer w-4/5 truncate">{label}</h4>
           <h4>${price.toFixed(2)}</h4>
         </Flex>
       </div>
