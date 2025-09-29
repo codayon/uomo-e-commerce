@@ -19,7 +19,7 @@ const data = {
 
 export default function Banner() {
   return (
-    <section className="flex pb-12">
+    <section className="flex pb-10">
       <div className="text-222222 flex flex-col items-center justify-center gap-y-14">
         <div className="text-767676 flex flex-col gap-6">
           {data.social.map((item) => (
@@ -38,15 +38,15 @@ export default function Banner() {
         </span>
       </div>
       <div className="border-f5e6e0 w-full p-2 border-2">
-        <div className="bg-f5e6e0 group h-[770px]">
+        <div className="bg-f5e6e0 group">
           <Container>
-            <h4 className="text-c32929 before:bg-c32929 flex items-center before:block before:w-10 before:h-0.5 before:mr-2 pt-72 text-sm font-medium">
-              NEW TREND
-            </h4>
-            <h1 className="text-7xl leading-20 max-w-3xl">
-              SUMMER SALE STYLISH <span className="font-bold">WOMENS</span>
-            </h1>
-            <div className="pb-64">
+            <div className="py-64">
+              <h4 className="text-c32929 before:bg-c32929 flex items-center before:block before:w-10 before:h-0.5 before:mr-2 text-sm font-medium">
+                NEW TREND
+              </h4>
+              <h1 className="max-w-3xl text-7xl leading-20 py-3">
+                SUMMER SALE STYLISH <span className="font-bold">WOMENS</span>
+              </h1>
               <Button label="DISCOVER MORE" />
             </div>
           </Container>

@@ -41,12 +41,12 @@ export default function TrendyProducts() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <section className="py-12">
+    <section className="py-10">
       <Container>
         <h3 className="text-4xl text-center">
           OUR TRENDY <span className="font-bold">PRODUCTS</span>
         </h3>
-        <ul className="flex justify-center gap-8 py-10 font-medium">
+        <ul className="flex justify-center gap-8 py-8 font-medium">
           {data.menu.map((item) => (
             <MenuItem
               key={item.id}
@@ -55,7 +55,7 @@ export default function TrendyProducts() {
             />
           ))}
         </ul>
-        <div className={"flex flex-wrap gap-10 justify-between"}>
+        <div className="flex flex-wrap gap-10 justify-between">
           {apiData.map((item) => (
             <ProductCard
               key={item.id}
@@ -68,7 +68,7 @@ export default function TrendyProducts() {
             />
           ))}
         </div>
-        <div className="flex justify-center pt-8 pb-12">
+        <div className="flex justify-center pt-8">
           <Button label="SEE ALL PRODUCT" />
         </div>
       </Container>
