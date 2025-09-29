@@ -1,6 +1,7 @@
 import Banner from "@/components/layouts/Banner";
 import Categories from "@/components/layouts/Categories";
 import DealOfTheWeek from "@/components/layouts/DealOfTheWeek";
+import LimitedEdition from "@/components/layouts/LimitedEdition";
 import Slider from "@/components/layouts/Slider";
 import TrendyProducts from "@/components/layouts/TrendyProducts";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <TrendyProducts />
       <DealOfTheWeek />
       <Banner />
+      <LimitedEdition />
     </>
   );
 }
