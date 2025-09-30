@@ -3,6 +3,7 @@ import Categories from "@/components/layouts/Categories";
 import DealOfTheWeek from "@/components/layouts/DealOfTheWeek";
 import Gallery from "@/components/layouts/Gallery";
 import LimitedEdition from "@/components/layouts/LimitedEdition";
+import Services from "@/components/layouts/Services";
 import Slider from "@/components/layouts/Slider";
 import TrendyProducts from "@/components/layouts/TrendyProducts";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Banner />
       <LimitedEdition />
       <Gallery />
+      <Services />
     </>
   );
 }
