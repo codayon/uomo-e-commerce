@@ -1,25 +1,49 @@
 @import "tailwindcss";
 
 @theme {
+  /* Very Dark Gray (Almost Black) */
   --color-222222: #222222;
+
+  /* Medium Gray */
   --color-767676: #767676;
+
+  /* Very Light Peach / Soft Beige */
   --color-f5e6e0: #f5e6e0;
+
+  /* Crimson Red */
   --color-c32929: #c32929;
 
+  /* Cool Light Gray */
   --color-eff0f2: #eff0f2;
+
+  /* Warm Light Gray / Beige Tint */
   --color-e5e2dd: #e5e2dd;
+
+  /* Neutral Light Gray */
   --color-e7e6e4: #e7e6e4;
+
+  /* (duplicate) Very Light Peach / Soft Beige */
   --color-f5e6e0: #f5e6e0;
 
+  /* Light Gray */
   --color-e4e4e4: #e4e4e4;
+
+  /* Muted Gray */
   --color-cfcdcd: #cfcdcd;
 
+  /* Off White / Subtle Gray */
   --color-f1f1f1: #f1f1f1;
+
+  /* Snow White / Ultra Light Gray */
   --color-f9f9f9: #f9f9f9;
 
+  /* Pale Gray */
   --color-ebebeb: #ebebeb;
 
+  /* Strong Red */
   --color-d6001c: #d6001c;
+
+  /* Ivory / Warm White */
   --color-faf9f8: #faf9f8;
 }
 
