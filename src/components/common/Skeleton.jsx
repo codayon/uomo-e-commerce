@@ -1,4 +1,4 @@
-export default function Skeleton() {
+export const ProductCardSkeleton = () => {
   return (
     <div className="bg-f9f9f9 border flex flex-col animate-pulse">
       <div className="bg-f1f1f1 w-[300px] aspect-square"></div>
@@ -7,4 +7,8 @@ export default function Skeleton() {
       </div>
     </div>
   );
-}
+};
+
+export const GallerySkeleton = () => {
+  return <div className="bg-f1f1f1 w-52 aspect-square animate-pulse"></div>;
+};
