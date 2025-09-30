@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 
 import Container from "../common/Container";
 import ProductCard from "../common/ProductCard";
+import Skeleton from "../common/Skeleton";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 export default function LimitedEdition() {
@@ -34,54 +35,68 @@ export default function LimitedEdition() {
     fetchData();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  
   return (
     <section className="mb-20">
       <Container>
         <h3 className="text-4xl text-center mb-10">
-          OUR TRENDY <span className="font-bold">PRODUCTS</span>
+          LIMITED <span className="font-bold">EDITION</span>
         </h3>
+
         <div className="relative">
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={32}
-            slidesPerView={4}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-          >
-            {apiData.map((item) => (
-              <SwiperSlide key={item.id}>
-                <ProductCard
-                  src={item.thumbnail}
-                  alt={item.title}
-                  category={item.category}
-                  label={item.title}
-                  price={item.price}
-                  divClassName="bg-f1f1f1"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <button
-            ref={prevRef}
-            className="text-767676 text-3xl swiper-prev absolute -left-12 top-1/2 cursor-pointer"
-          >
-            <BsChevronLeft />
-          </button>
-          <button
-            ref={nextRef}
-            className="text-767676 text-3xl swiper-prev absolute -right-12 top-1/2 cursor-pointer"
-          >
-            <BsChevronRight />
-          </button>
+          {error ? (
+            <div className="text-center text-red-600 py-10">
+              Failed to load products. Please try again.
+            </div>
+          ) : (
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={40}
+              slidesPerView={4}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+            >
+              {loading
+                ? Array.from({ length: 8 }).map((_, idx) => (
+                    <SwiperSlide key={idx}>
+                      <Skeleton />
+                    </SwiperSlide>
+                  ))
+                : apiData.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <ProductCard
+                        src={item.thumbnail}
+                        alt={item.title}
+                        category={item.category}
+                        label={item.title}
+                        price={item.price}
+                      />
+                    </SwiperSlide>
+                  ))}
+            </Swiper>
+          )}
+
+          {!error && (
+            <>
+              <button
+                ref={prevRef}
+                className="text-767676 text-3xl swiper-prev absolute -left-12 top-1/2 cursor-pointer"
+              >
+                <BsChevronLeft />
+              </button>
+              <button
+                ref={nextRef}
+                className="text-767676 text-3xl swiper-prev absolute -right-12 top-1/2 cursor-pointer"
+              >
+                <BsChevronRight />
+              </button>
+            </>
+          )}
         </div>
       </Container>
     </section>

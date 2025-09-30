@@ -1,3 +1,4 @@
+import cn from "@/utils/cn";
 import Flex from "./Flex";
 import ImageWrapper from "./ImageWrapper";
 import { HeartIcon } from "./SvgAssets";
@@ -14,8 +15,8 @@ export default function ProductCard({
   return (
     <div className="bg-f9f9f9 relative group border">
       <ImageWrapper
-        divClassName={divClassName}
-        imgClassName={imgClassName}
+        divClassName={cn("bg-f1f1f1", divClassName)}
+        imgClassName={cn("w-[300px] aspect-square", imgClassName)}
         src={src}
         alt={alt}
       />

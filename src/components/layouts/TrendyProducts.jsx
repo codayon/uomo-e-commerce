@@ -5,6 +5,7 @@ import Button from "../common/Button";
 import Container from "../common/Container";
 import MenuItem from "../common/MenuItem";
 import ProductCard from "../common/ProductCard";
+import Skeleton from "../common/Skeleton";
 
 const data = {
   menu: [
@@ -37,9 +38,6 @@ export default function TrendyProducts() {
     fetchData();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
   return (
     <section className="mb-20">
       <Container>
@@ -55,18 +53,25 @@ export default function TrendyProducts() {
             />
           ))}
         </ul>
-        <div className="flex flex-wrap gap-10 justify-between">
-          {apiData.map((item) => (
-            <ProductCard
-              key={item.id}
-              src={item.thumbnail}
-              alt={item.title}
-              category={item.category}
-              label={item.title}
-              price={item.price}
-              divClassName="bg-f1f1f1"
-            />
-          ))}
+        <div className="flex flex-wrap justify-between gap-10">
+          {error ? (
+            <div className="text-c32929 py-10">
+              Failed to load products. Please try again.
+            </div>
+          ) : loading ? (
+            Array.from({ length: 8 }).map((_, idx) => <Skeleton key={idx} />)
+          ) : (
+            apiData.map((item) => (
+              <ProductCard
+                key={item.id}
+                src={item.thumbnail}
+                alt={item.title}
+                category={item.category}
+                label={item.title}
+                price={item.price}
+              />
+            ))
+          )}
         </div>
         <div className="flex justify-center pt-8">
           <Button label="SEE ALL PRODUCT" />
