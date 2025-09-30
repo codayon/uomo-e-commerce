@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 import Container from "../common/Container";
 import ProductCard from "../common/ProductCard";
-import Skeleton from "../common/Skeleton";
+import { ProductCardSkeleton } from "../common/Skeleton";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 export default function LimitedEdition() {
@@ -44,7 +44,7 @@ export default function LimitedEdition() {
 
         <div className="relative">
           {error ? (
-            <div className="text-center text-red-600 py-10">
+            <div className="text-c32929 py-10">
               Failed to load products. Please try again.
             </div>
           ) : (
@@ -64,7 +64,7 @@ export default function LimitedEdition() {
               {loading
                 ? Array.from({ length: 8 }).map((_, idx) => (
                     <SwiperSlide key={idx}>
-                      <Skeleton />
+                      <ProductCardSkeleton />
                     </SwiperSlide>
                   ))
                 : apiData.map((item) => (

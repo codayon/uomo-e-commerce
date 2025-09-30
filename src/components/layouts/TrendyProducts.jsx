@@ -5,7 +5,7 @@ import Button from "../common/Button";
 import Container from "../common/Container";
 import MenuItem from "../common/MenuItem";
 import ProductCard from "../common/ProductCard";
-import Skeleton from "../common/Skeleton";
+import { ProductCardSkeleton } from "../common/Skeleton";
 
 const data = {
   menu: [
@@ -59,7 +59,9 @@ export default function TrendyProducts() {
               Failed to load products. Please try again.
             </div>
           ) : loading ? (
-            Array.from({ length: 8 }).map((_, idx) => <Skeleton key={idx} />)
+            Array.from({ length: 8 }).map((_, idx) => (
+              <ProductCardSkeleton key={idx} />
+            ))
           ) : (
             apiData.map((item) => (
               <ProductCard
